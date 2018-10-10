@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-
+import pig from '../../imgs/猪.gif';
+import {Link} from 'react-router-dom';
+import './index.less'
 class NotMatch  extends Component {
     constructor(props) {
         super(props)
@@ -7,8 +9,14 @@ class NotMatch  extends Component {
 
     render() {
         return (
-            <div>
-                <h2>我是404错误页面</h2>
+            <div className='notMatch'>
+                <div className='notleft'>
+                    <h1>404 NOT FOUND!!!</h1>
+                    <Link to='/admin'>退出</Link>
+                </div>
+                <div className='notright'>
+                    <img src={pig} alt=""/>
+                </div>
             </div>
         )
     }
