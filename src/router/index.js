@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {HashRouter,Route,Switch} from 'react-router-dom';
 import Home from '../views/home';
-import Admin from '../admin'
+import Admin from '../admin';
 import NotMatch from '../views/notMatch';
-import SecondPage from '../views/secondPage'
-
+import SecondPage from '../views/secondPage';
+import Order_demo from '../views/order_demo';
 class Router  extends Component {
     constructor(props) {
         super(props)
@@ -20,6 +20,7 @@ class Router  extends Component {
                                <Switch>
                                    <Route path='/admin/home'   component={Home}></Route>
                                    <Route path='/admin/secondPage'  component={SecondPage}></Route>
+                                   <Route path='/admin/order_demo' component={Order_demo}></Route>
                                    <Route component={NotMatch}></Route>
                                </Switch>
                             </Admin>
