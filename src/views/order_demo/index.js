@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './index.less';
 import Axios from '../../axios';
 import {Select,Card,DatePicker,Button ,Table,message,Modal} from 'antd';
+import {Link} from 'react-router-dom';
 const Option = Select.Option;
 class  Order_demo extends Component {
     constructor(props) {
@@ -140,6 +141,14 @@ class  Order_demo extends Component {
             visible: false,
         });
     }
+    orderDetail = ()=>{
+        let selectedItem = this.state.selectedItem[0];
+        if(selectedItem){
+            window.open(`/#/mapPage/${selectedItem.id}`)
+        }else {
+            message.info('请选择一个订单!')
+        }
+    }
     componentWillMount(){
         this.getOrderData()
     }
@@ -257,7 +266,7 @@ class  Order_demo extends Component {
                 </Card>
                 <Card>
                     <div className='two-btn'>
-                        <Button type='primary'>订单详情</Button>
+                        <Button type='primary' onClick={this.orderDetail}>订单详情</Button>
                         <Button className='btn2' type='primary' onClick={this.endOrder}>结束订单</Button>
                         <Modal
                             title="结束订单"

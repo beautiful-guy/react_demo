@@ -1,0 +1,34 @@
+.detail-header{
+  height: 40px;
+  background-color: rgb(17,117,235);
+  line-height: 40px;
+  color: #fff;
+  .detail-name{
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .detail-userinfo{
+    font-size: 14px;
+    span{
+      margin-right: 20px;
+    }
+  }
+}
+.fll{
+  float: left;
+}
+.flr{
+  float: right;
+}
+clearfloat{
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0;
+  }
+}
+.logout{
+  color: #ea4637;
+}

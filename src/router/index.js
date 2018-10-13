@@ -5,6 +5,7 @@ import Admin from '../admin';
 import NotMatch from '../views/notMatch';
 import SecondPage from '../views/secondPage';
 import Order_demo from '../views/order_demo';
+import MapPage from '../views/map_page';
 class Router  extends Component {
     constructor(props) {
         super(props)
@@ -25,6 +26,7 @@ class Router  extends Component {
                                </Switch>
                             </Admin>
                         } />
+                        <Route path='/mapPage/:id' component={MapPage}></Route>
                         <Route component={NotMatch}></Route>
                     </Switch>
                 </div>
